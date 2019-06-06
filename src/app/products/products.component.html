@@ -1,0 +1,20 @@
+<div *ngIf="selectedProduct" class="detailsDisplay">
+  <div class="container">
+    <h2>{{selectedProduct.name | uppercase}} Details</h2>
+    <div><span>ID: </span>{{selectedProduct.id}}</div>
+    <div><span>Name: </span>{{selectedProduct.name}}</div>
+    <div><span>Description: </span>{{selectedProduct.description}}</div>
+    <div><span>Price: </span>{{selectedProduct.price | currency}}</div>
+  </div>
+  <div>
+    <label>
+      <input [(ngModel)]="selectedProduct.name" placeholder="name"/>
+    </label>
+  </div>
+</div>
+<h2>Products</h2>
+<ul class="products">
+  <li [class.selected]="product === selectedProduct" *ngFor="let product of products" (click)="onSelect(product)">
+    {{product.name}} <span>{{product.price | currency}}</span>
+  </li>
+</ul>

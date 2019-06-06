@@ -1,0 +1,35 @@
+*{
+    max-width: 960px;
+    margin:0 auto;
+    text-align:center;
+    font-family: Helvetica, sans-serif;
+}
+h2 {
+    padding:2rem;
+}
+.selected {
+    background-color:#3399FF;
+    color:#fff;
+    border-radius: 10px;
+    padding:0.5rem;
+}
+.detailsDisplay > div { 
+    padding:0.5rem;
+}
+.products {
+    width:15rem;
+    list-style: none;
+}
+.products li {
+    cursor:pointer;
+    padding:0.5rem;
+    text-align:left;
+}
+.products li:hover {
+    background-color:#999;
+    border-radius:10px;
+    color:#fff;
+}
+.products span {
+    padding:0.5rem;
+}
